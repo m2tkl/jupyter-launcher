@@ -15,11 +15,11 @@ If you want to run jupyter with gpu, you need to prepare gpu environment. Please
     ```
     git clone https://github.com/kenchalros/jupyter-lauhcher.git
     ```
-1. **Execute `launch`**
+1. **Execute `launch`**  
 Execute `launch cpu` or `launch gpu` ( `gpu` needs another setting. ) in the directory that you want to run jupyter-lab ( recommended to register an alias or add path to execute `lauhch`. ) .  
 `launch` command requires one param `cpu` or `gpu`. Option `-h` gives more infomation.
 
-1. **Access port `8888` in browser.**
+1. **Access port `8888` in browser.**  
 If you execute `launch` command on local machine, you may access `localhost:8888` .
 In the case of execute on remote server, you may access `<hostname>:8888`
 
