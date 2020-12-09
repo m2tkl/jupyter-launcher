@@ -14,13 +14,17 @@ RUN wget https://repo.continuum.io/archive/Anaconda3-2019.10-Linux-x86_64.sh && 
 
 ENV PATH /opt/anaconda3/bin:$PATH
 
-RUN conda install nodejs
-
 RUN pip install --upgrade pip && pip install \
     pyqt5==5.12 \
     PyQtWebEngine==5.12 \
     Keras==2.2.4 \
-    tensorflow==1.13.1 \
+    tensorflow==1.13.1
+
+RUN conda install nodejs
+
+RUN jupyter labextension install \
+    @jupyterlab/toc \
+    @lckr/jupyterlab_variableinspector
 
 WORKDIR /work
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
